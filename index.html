@@ -3,12 +3,16 @@
 <title>Diana R. Website</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
 <head>
     <meta charset="UTF-8">
     <title>Diana Ramirez</title>
 </head>
 <body>
 <style>
+       @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700');
+
+
     body{
         height: 100%;
         margin: 0;
@@ -19,7 +23,90 @@
         color: #010101;
     }
     h1{
-        color:#F0ECE2
+        color: #25f01f
+    }
+
+
+
+    *,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}html,body{height:100vh;}body{display:flex;align-items:center;justify-content:center;padding:40px;font:14px/1.5 'Open Sans',sans-serif;color:#345;background:#f0f2f4;}
+
+
+    p:not(:last-child) {
+        margin: 0 0 20px;
+    }
+
+    main {
+        max-width: 800px;
+        padding: 40px;
+        border: 1px solid rgba(0,0,0,.2);
+        background: #fff;
+        box-shadow: 0 1px 3px rgba(0,0,0,.1);
+    }
+
+    section {
+        display: none;
+        padding: 20px 0 0;
+        border-top: 1px solid #abc;
+    }
+
+    input {
+        display: none;
+    }
+
+    label {
+        display: inline-block;
+        margin: 0 0 -1px;
+        padding: 15px 25px;
+        font-weight: 600;
+        text-align: center;
+        color: #abc;
+        border: 1px solid transparent;
+    }
+
+    label:before {
+        font-family: fontawesome;
+        font-weight: normal;
+        margin-right: 10px;
+    }
+
+    label[for*='1']:before { content: '\f1d1'; }
+    label[for*='2']:before { content: '\f1e3'; }
+    label[for*='3']:before { content: '\f13d'; }
+    label[for*='4']:before { content: '\f06c'; }
+
+    label:hover {
+        color: #789;
+        cursor: pointer;
+    }
+
+    input:checked + label {
+        color: #000000;
+        border: 1px solid #abc;
+        border-top: 2px solid #0af;
+        border-bottom: 1px solid #fff;
+    }
+
+    #tab1:checked ~ #content1,
+    #tab2:checked ~ #content2,
+    #tab3:checked ~ #content3,
+    #tab4:checked ~ #content4 {
+        display: block;
+    }
+
+    @media screen and (max-width: 800px) {
+        label {
+            font-size: 0;
+        }
+        label:before {
+            margin: 0;
+            font-size: 18px;
+        }
+    }
+
+    @media screen and (max-width: 500px) {
+        label {
+            padding: 15px;
+        }
     }
 
 </style>
@@ -29,19 +116,39 @@
 </header>
 -->
     <main>
-        <div class="w3-container">
-            <div class="w3-panel w3-card w3-grey" style="width:20% height:80%">
-                <h1  style="vertical-align:bottom">
-                <img src="http://usatsneakhype.files.wordpress.com/2013/06/tumblr_m9df6yrsoi1rzycmdo1_12803.jpg?w=620&h=413" width="500" height="300" alt="city light">
-                Welcome! </h1>
+        <input id="tab1" type="radio" name="tabs" checked>
+        <label for="tab1">Home</label>
+
+        <input id="tab2" type="radio" name="tabs">
+        <label for="tab2">temp2</label>
+
+        <input id="tab3" type="radio" name="tabs">
+        <label for="tab3">temp3</label>
+
+        <input id="tab4" type="radio" name="tabs">
+        <label for="tab4">Interesting Links</label>
+        <section id="content1">
+            <p>
+            <div class="w3-container">
+                <div class="w3-panel w3-card w3-grey" style="height:50% width: 80% ">
+
+                    Container 2
+                </div>
+                <div class="w3-panel w3-card w3-grey" style="width:50% height:80%">
+                    <h1  style="vertical-align:bottom" >
+                        <img src="http://usatsneakhype.files.wordpress.com/2013/06/tumblr_m9df6yrsoi1rzycmdo1_12803.jpg?w=620&h=413" width="500" height="300" alt="city light">
+                        Welcome!
+                    </h1>
+                </div>
             </div>
-        </div>
+            <a href="#">
+            <!--
+            <img src=https://images.pexels.com/photos/169647/pexels-photo-169647.jpeg?cs=srgb&dl=architecture-buildings-city-169647.jpg&fm=jpg" width="604" height="453">
+            -->
 
-        <a href="#">
-            
-
-        </a>
-        
+            </a>
+            </p>
+        </section>
         
 
     </main>
