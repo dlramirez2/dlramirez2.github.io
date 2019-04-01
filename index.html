@@ -69,11 +69,6 @@
         margin-right: 10px;
     }
 
-    label[for*='1']:before { content: '\f1d1'; }
-    label[for*='2']:before { content: '\f1e3'; }
-    label[for*='3']:before { content: '\f13d'; }
-    label[for*='4']:before { content: '\f06c'; }
-
     label:hover {
         color: #789;
         cursor: pointer;
@@ -117,17 +112,29 @@
 -->
     <main>
         <input id="tab1" type="radio" name="tabs" checked>
-       <i class="fas fa-anchor"></i>
-        <label for="tab1">Home</label>
+       
+        <label for="tab1">
+            <i class="fas fa-anchor"></i>
+            Home
+        </label>
 
         <input id="tab2" type="radio" name="tabs">
-        <label for="tab2">temp2</label>
+        <label for="tab2">
+            <i class="fab fa-empire"></i>
+            temp2
+        </label>
 
         <input id="tab3" type="radio" name="tabs">
-        <label for="tab3">temp3</label>
+        <label for="tab3">
+            <i class="far fa-futbol"></i>
+            temp3
+        </label>
 
         <input id="tab4" type="radio" name="tabs">
-        <label for="tab4">Interesting Links</label>
+        <label for="tab4">
+            Interesting Links
+            <i class="fas fa-leaf"></i>
+        </label>
         <section id="content1">
             <p>
             <div class="w3-container">
