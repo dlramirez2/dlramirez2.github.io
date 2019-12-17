@@ -3,7 +3,7 @@
     body{
         position: fixed;
         height: 80%;
-        
+        width: 100%;
         margin: 0;
         background-color:#dfe2e2;
         text-align: left;
