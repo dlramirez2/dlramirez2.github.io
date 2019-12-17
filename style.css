@@ -2,6 +2,10 @@
     @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700');
     body{
         position: fixed;
+        top: auto;
+    bottom: auto;
+    left: auto;
+    right: auto;
         height: 100%;
         width: 100%;
         margin: 0;
