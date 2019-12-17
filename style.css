@@ -2,7 +2,7 @@
     @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700');
     body{
         position: fixed;
-        
+        height: 100%;
         margin: 0;
         background-color:#dfe2e2;
         text-align: left;
