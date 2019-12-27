@@ -106,25 +106,25 @@
             </h3>
             <p>
                 <b>Docker create container</b>
- 		<br/>docker pull [imageName]
-          	<br/>docker run --name  [containerName] -it imageName
+ 		<br/><i>docker pull [imageName]</i>
+          	<br/><i>docker run --name  [containerName] -it imageName</i>
            
             	<br/><b>Copy file to Container</b>
-            	<br/>docker cp file.name [ContainerName]: /path/inside/container
+            	<br/><i>docker cp file.name [ContainerName]: /path/inside/container </i>
           	<br/><b>Run Docker container</b>
-      		<br/>docker start [containerName]
-		<br/>docker exec -it [containerName] /bin/bash
-		<br/>docker attach [containerName]
+      		<br/><i>docker start [containerName]</i>
+		<br/><i>docker exec -it [containerName] /bin/bash </i>
+		<br/><i>docker attach [containerName]</i>
            	<br/><b>Docker Errors</b>
 		<br/>**Docker can’t connect to docker daemon
-		<br/>sudo groupadd docker
-		<br/>sudo usermod -aG docker $(whoami)
+		<br/><i>sudo groupadd docker</i>
+		<br/><i>sudo usermod -aG docker $(whoami)</i>
 		<br/>**Cannot connect to the Docker daemon at unix.... Is the docker daemon running?
-		<br/>sudo service docker start
+		<br/><i>sudo service docker start</i>
 		<br/><b>Docker Container List</b>
-		<br/>docker ps -a
+		<br/><i>docker ps -a </i>
 		<br/><b>Docker Remove Container</b>
-		<br/>docker rm container_name
+		<br/><i>docker rm container_name</i>
             </p>
         </div>    
     </section>    
