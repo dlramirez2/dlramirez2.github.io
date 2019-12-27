@@ -102,8 +102,50 @@
         </div>
        
         <div class="w3-panel" id="contw3">
-            <h3><b>Volatility</b>
-            </h3>    
+            <h3 align="left"><b>Volatility</b>
+            </h3>
+            <p align"left">
+                <b>Docker create container</b>
+            </p> 
+            <p align"left">
+	docker pull [imageName]
+            </p>
+            <p align"left">
+	docker run --name  [containerName] -it imageName
+            </p>
+            <p align"left"><b>
+                Copy file to Container</b>
+            </p>
+            <p align"left">
+	docker cp file.name [ContainerName]: /path/inside/container
+            </p>
+            <p align"left"><b>
+                Run Docker container</b>
+            <p align"left">    
+	docker start [containerName]
+	docker exec -it [containerName] /bin/bash
+	docker attach [containerName]
+            </p>
+            <p align"left"><b>
+                Docker Errors</b>
+            <p>    
+             <p align"left">   
+-	Docker can’t connect to docker daemon
+sudo groupadd docker
+sudo usermod -aG docker $(whoami)
+
+-	Cannot connect to the Docker daemon at unix///.,.. Is the docker daemon running?
+sudo service docker start
+
+-	temp
+
+Docker Container List
+	docker ps -a
+
+Docker Remove Container
+	docker rm container_name
+
+            </p>
         </div>    
     </section>    
     <!Notes End>
