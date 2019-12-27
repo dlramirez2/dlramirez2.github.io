@@ -1,8 +1,8 @@
 
     @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700');
     body{
-        height: 100%;
-        margin: 0;
+        height: auto;
+        margin: auto;
         background-color:#dfe2e2;
         text-align: left;
         color: #010101;
