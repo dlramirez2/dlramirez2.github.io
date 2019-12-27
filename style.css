@@ -2,7 +2,7 @@
     @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700');
     body{
         height: auto;
-        margin: auto;
+        width: auto;
         background-color:#dfe2e2;
         text-align: left;
         color: #010101;
