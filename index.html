@@ -106,45 +106,25 @@
             </h3>
             <p align"left">
                 <b>Docker create container</b>
-            </p> 
-            <p align"left">
-	docker pull [imageName]
-            </p>
-            <p align"left">
-	docker run --name  [containerName] -it imageName
-            </p>
-            <p align"left"><b>
-                Copy file to Container</b>
-            </p>
-            <p align"left">
-	docker cp file.name [ContainerName]: /path/inside/container
-            </p>
-            <p align"left"><b>
-                Run Docker container</b>
-            <p align"left">    
-	docker start [containerName]
-	docker exec -it [containerName] /bin/bash
-	docker attach [containerName]
-            </p>
-            <p align"left"><b>
-                Docker Errors</b>
-            <p>    
-             <p align"left">   
--	Docker can’t connect to docker daemon
-sudo groupadd docker
-sudo usermod -aG docker $(whoami)
-
--	Cannot connect to the Docker daemon at unix///.,.. Is the docker daemon running?
-sudo service docker start
-
--	temp
-
-Docker Container List
-	docker ps -a
-
-Docker Remove Container
-	docker rm container_name
-
+ 		<br/>docker pull [imageName]
+          	<br/>docker run --name  [containerName] -it imageName
+           
+            	<br/><b>Copy file to Container</b>
+            	<br/>docker cp file.name [ContainerName]: /path/inside/container
+          	<br/><b>Run Docker container</b>
+      		<br/>docker start [containerName]
+		<br/>docker exec -it [containerName] /bin/bash
+		<br/>docker attach [containerName]
+           	<br/><b>Docker Errors</b>
+		<br/>Docker can’t connect to docker daemon
+		<br/>sudo groupadd docker
+		<br/>sudo usermod -aG docker $(whoami)
+		<br/>Cannot connect to the Docker daemon at unix///.,.. Is the docker daemon running?
+		<br/>sudo service docker start
+		<br/><b>Docker Container List</b>
+		<br/>docker ps -a
+		<br/><b>Docker Remove Container</b>
+		<br/>docker rm container_name
             </p>
         </div>    
     </section>    
