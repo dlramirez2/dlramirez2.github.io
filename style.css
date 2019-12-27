@@ -2,17 +2,19 @@
     @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700');
     body{
         height: 100%;
-         height: auto;
-         margin: 0;
-         background-color:#dfe2e2;
-         text-align: left;
-         justify-content:center;
-         padding:40px;
-         font:14px/1.5 'Open Sans',sans-serif;
-         color:#345;
-         background: #3c415e;
-         height:100vh;
-         position: absolute;
+        margin: 25%;
+        background-color:#dfe2e2;
+        text-align: center;
+        color: #010101;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        padding:40px;
+        font:14px/1.5 'Open Sans',sans-serif;
+        color:#345;
+        background: #3c415e;
+        height:100vh;
+        position:absolute;
     }
     h1{
         color: #000000
