@@ -3,6 +3,7 @@
     body{
         height: auto;
         width: auto;
+        margin: 0;
         background-color:#dfe2e2;
         text-align: left;
         color: #010101;
