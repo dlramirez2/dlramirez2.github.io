@@ -144,6 +144,95 @@
                     </div>
                 </div>
             </div>
+            <div class="row-1">
+                <div class="col s12 m6">
+                    <div class="card blue-grey darken-1">
+                        <div class="card-content white-text">
+                             <span class="card-title">
+                                 Docker
+                             </span>
+                            <p>
+                                <b>Docker create container</b>
+                                <br/><i>docker pull [imageName]</i>
+                                <br/><i>docker run --name  [containerName] -it imageName</i>
+
+                                <br/><b>Copy file to Container</b>
+                                <br/><i>docker cp file.name [ContainerName]: /path/inside/container </i>
+                                <br/><b>Run Docker container</b>
+                                <br/><i>docker start [containerName]</i>
+                                <br/><i>docker exec -it [containerName] /bin/bash </i>
+                                <br/><i>docker attach [containerName]</i>
+                                <br/><b>Docker Errors</b>
+                                <br/>**Docker can’t connect to docker daemon
+                                <br/><i>sudo groupadd docker</i>
+                                <br/><i>sudo usermod -aG docker $(whoami)</i>
+                                <br/>**Cannot connect to the Docker daemon at unix.... Is the docker daemon running?
+                                <br/><i>sudo service docker start</i>
+                                <br/><b>Docker Container List</b>
+                                <br/><i>docker ps -a </i>
+                                <br/><b>Docker Remove Container</b>
+                                <br/><i>docker rm container_name</i>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                        <div class="row-1">
+                <div class="col s12 m6">
+                    <div class="card blue-grey darken-1">
+                        <div class="card-content white-text">
+                             <span class="card-title">
+                                 Volatility
+                             </span>
+                            <p>
+                                <b>Debian Install Volatility</b>
+                                <br/><i>sudo apt-get install volatility</i>
+
+                                <br/><b>Verify Volatility is installed</b>
+                                <br/><i>volatility -h</i>
+                                <br/><b>Get image OS Volatility:</b>
+                                <br/><i>./vol.py imageinfo -f [/path/to/memory/dump]</i>
+                                <br/><b>View list of running processes</b>
+                                <br/><i>./vol.py --profile=[ProfileOSName] pslist -f</i>
+                                <br/><b>Get Kernel Debugger Block address (identify correct profile):</b>
+                                <br/><i>./vol.py --profile=[ProfileOSName] kdbgscan -g [/path/to/memory/dump]</i>
+                                <br/><b>Use Psscan for Malware Analysis (scan for hidden unlinked processes): </b>
+                                <br/><i>./vol.py --profile=[ProfileOSName] psscan -f [/path/to/memory/dump]</i>
+                                <br/><b>Display all DLLs for X running process:</b>
+                                <br/><i>./vol.py --profile=[ProfileOSName] dllist -p [processID] -f [/path/to/memory/dump]</i>
+
+                                <br/><b>Display all DLLs for all running processes:</b>
+                                <br/><i>./vol.py --profile=[ProfileOSName] dllist -f [/path/to/memory/dump]</i>
+                                <br/><b>View Processes in tree form (PsTree):</b>
+                                <br/><i>./vol.py --profile=[ProfileOSName] pstree -f [/path/to/memory/dump]</i>
+
+                                <br/><b>View commands typed locally or through backdoors:</b>
+                                <br/><i>./vol.py --profile=[ProfileOSName] consoles -f [/path/to/memory/dump]</i>
+                                <br/><b>View version info of executables:</b>
+                                <br/><i>./vol.py --plugins=contrib/plugins/ -f [/path/to/memory/dump] --profile-[ProfileOSName] verinfo</i>
+
+
+                                <br/><b>View TCP Connections:</b>
+                                <br/><i>./vol.py --profile-[ProfileOSName] connections -f [/path/to/memory/dump]</i>
+                                <br/><b>View network connections (Wind XP & Win Server 2003):</b>
+                                <br/><i>./vol.py --profile-[ProfileOSName] connscan -f [/path/to/memory/dump]</i>
+
+                                <br/><b>View network connections (Win & & beyond):</b>
+                                <br/><i>./vol.py --profile-[ProfileOSName] netscan-f [/path/to/memory/dump]</i>
+                                <br/><b>View Active and terminated connections:</b>
+                                <br/><i>./vol.py --profile-[ProfileOSName] connscan -f [/path/to/memory/dump]</i>
+
+                                <br/><b>View listening sockets (TCP & UDP):</b>
+                                <br/><i>./vol.py --profile-[ProfileOSName] sockets -f [/path/to/memory/dump]</i>
+                                <br/><b>View lists of running services:</b>
+                                <br/><i>./vol.py --profile-[ProfileOSName] svcscan -f [/path/to/memory/dump]</i>
+
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </section>
         <!Notes End>
         <!Interesting Links Tab>
