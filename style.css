@@ -14,8 +14,8 @@ body{
     justify-content:center;
     padding: 0;
     font:14px/1.5 'Open Sans',sans-serif;
-    color:#345;
-    background: #3c415e;
+    color:#1b2a49;
+    background: #465881;
     position: absolute;
 }
 
@@ -99,4 +99,9 @@ footer{
 }
 a{
     text-decoration:none;
+}
+blockquote{
+    margin: 20px 0;
+    padding-left: 1.5rem;
+    border-left: 5px solid #00909e; /* Just change the color value and that's it*/
 }
