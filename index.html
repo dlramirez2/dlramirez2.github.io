@@ -214,94 +214,78 @@
                     </div>
                 </div>
             </div>
-                        <div class="row-1">
-                <div class="col s12 m6">
-                    <div class="card blue-grey lighten-1">
-                        <div class="card-content black-text">
-                             <span class="card-title">
-                                 Docker
-                             </span>
-                                <li><b>Docker create container:</b></li>
+            <button type="button" class="collapsible">Docker</button>
+        <div class="content">
+          <p>
+            <li><b>Docker create container:</b></li>
 
-                                <i>docker pull [imageName]</i>
-                                <br/><i>docker run --name  [containerName] -it imageName</i>
+            <i>docker pull [imageName]</i>
+            <br/><i>docker run --name  [containerName] -it imageName</i>
 
-                                <li><b>Copy file to Container:</b></li>
-                                <i>docker cp file.name [ContainerName]: /path/inside/container </i>
-                                <li><b>Run Docker container:</b></li>
-                                <i>docker start [containerName]</i>
-                                <br/><i>docker exec -it [containerName] /bin/bash </i>
-                                <br/><i>docker attach [containerName]</i>
-                                <li><b>Docker Errors</b></li>
-                                **Docker can’t connect to docker daemon
-                                <br/><i>sudo groupadd docker</i>
-                                <br/><i>sudo usermod -aG docker $(whoami)</i>
-                                <br/>**Cannot connect to the Docker daemon at unix.... Is the docker daemon running?
-                                <br/><i>sudo service docker start</i>
-                                <li><b>Docker Container List</b></li>
-                                <i>docker ps -a </i>
-                            <li><b>Docker Remove Container</b></li>
-                                <i>docker rm container_name</i>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <li><b>Copy file to Container:</b></li>
+            <i>docker cp file.name [ContainerName]: /path/inside/container </i>
+            <li><b>Run Docker container:</b></li>
+            <i>docker start [containerName]</i>
+            <br/><i>docker exec -it [containerName] /bin/bash </i>
+            <br/><i>docker attach [containerName]</i>
+            <li><b>Docker Errors</b></li>
+            **Docker can’t connect to docker daemon
+            <br/><i>sudo groupadd docker</i>
+            <br/><i>sudo usermod -aG docker $(whoami)</i>
+            <br/>**Cannot connect to the Docker daemon at unix.... Is the docker daemon running?
+            <br/><i>sudo service docker start</i>
+            <li><b>Docker Container List</b></li>
+            <i>docker ps -a </i>
+        <li><b>Docker Remove Container</b></li>
+            <i>docker rm container_name</i>
+          </p>
+        </div>
+        <button type="button" class="collapsible">Volatility</button>
+        <div class="content">
+          <p>
+            <li><b>Debian Install Volatility</b></li>
+                            <i>sudo apt-get install volatility</i>
 
-                        <div class="row-1">
-                <div class="col s12 m6">
-                    <div class="card blue-grey lighten-1">
-                        <div class="card-content black-text">
-                             <span class="card-title">
-                                 Volatility
-                             </span>
+                        <li><b>Verify Volatility is installed</b></li>
+                            <i>volatility -h</i>
+                        <li><b>Get image OS Volatility:</b></li>
+                            <i>./vol.py imageinfo -f [/path/to/memory/dump]</i>
+                        <li><b>View list of running processes</b></li>
+                            <i>./vol.py --profile=[ProfileOSName] pslist -f</i>
+                        <li><b>Get Kernel Debugger Block address (identify correct profile):</b></li>
+                            <i>./vol.py --profile=[ProfileOSName] kdbgscan -g [/path/to/memory/dump]</i>
+                        <li><b>Use Psscan for Malware Analysis (scan for hidden unlinked processes): </b></li>
+                            <i>./vol.py --profile=[ProfileOSName] psscan -f [/path/to/memory/dump]</i>
+                        <li><b>Display all DLLs for X running process:</b></li>
+                            <i>./vol.py --profile=[ProfileOSName] dllist -p [processID] -f [/path/to/memory/dump]</i>
 
-                            <li><b>Debian Install Volatility</b></li>
-                                <i>sudo apt-get install volatility</i>
+                        <li><b>Display all DLLs for all running processes:</b></li>
+                            <i>./vol.py --profile=[ProfileOSName] dllist -f [/path/to/memory/dump]</i>
+                        <li> <b>View Processes in tree form (PsTree):</b></li>
+                            <i>./vol.py --profile=[ProfileOSName] pstree -f [/path/to/memory/dump]</i>
 
-                            <li><b>Verify Volatility is installed</b></li>
-                                <i>volatility -h</i>
-                            <li><b>Get image OS Volatility:</b></li>
-                                <i>./vol.py imageinfo -f [/path/to/memory/dump]</i>
-                            <li><b>View list of running processes</b></li>
-                                <i>./vol.py --profile=[ProfileOSName] pslist -f</i>
-                            <li><b>Get Kernel Debugger Block address (identify correct profile):</b></li>
-                                <i>./vol.py --profile=[ProfileOSName] kdbgscan -g [/path/to/memory/dump]</i>
-                            <li><b>Use Psscan for Malware Analysis (scan for hidden unlinked processes): </b></li>
-                                <i>./vol.py --profile=[ProfileOSName] psscan -f [/path/to/memory/dump]</i>
-                            <li><b>Display all DLLs for X running process:</b></li>
-                                <i>./vol.py --profile=[ProfileOSName] dllist -p [processID] -f [/path/to/memory/dump]</i>
-
-                            <li><b>Display all DLLs for all running processes:</b></li>
-                                <i>./vol.py --profile=[ProfileOSName] dllist -f [/path/to/memory/dump]</i>
-                            <li> <b>View Processes in tree form (PsTree):</b></li>
-                                <i>./vol.py --profile=[ProfileOSName] pstree -f [/path/to/memory/dump]</i>
-
-                            <li><b>View commands typed locally or through backdoors:</b></li>
-                                <i>./vol.py --profile=[ProfileOSName] consoles -f [/path/to/memory/dump]</i>
-                            <li><b>View version info of executables:</b></li>
-                                <i>./vol.py --plugins=contrib/plugins/ -f [/path/to/memory/dump] --profile-[ProfileOSName] verinfo</i>
+                        <li><b>View commands typed locally or through backdoors:</b></li>
+                            <i>./vol.py --profile=[ProfileOSName] consoles -f [/path/to/memory/dump]</i>
+                        <li><b>View version info of executables:</b></li>
+                            <i>./vol.py --plugins=contrib/plugins/ -f [/path/to/memory/dump] --profile-[ProfileOSName] verinfo</i>
 
 
-                            <li><b>View TCP Connections:</b></li>
-                                <i>./vol.py --profile-[ProfileOSName] connections -f [/path/to/memory/dump]</i>
-                            <li><b>View network connections (Wind XP & Win Server 2003):</b></li>
-                                <i>./vol.py --profile-[ProfileOSName] connscan -f [/path/to/memory/dump]</i>
+                        <li><b>View TCP Connections:</b></li>
+                            <i>./vol.py --profile-[ProfileOSName] connections -f [/path/to/memory/dump]</i>
+                        <li><b>View network connections (Wind XP & Win Server 2003):</b></li>
+                            <i>./vol.py --profile-[ProfileOSName] connscan -f [/path/to/memory/dump]</i>
 
-                            <li><b>View network connections (Win & & beyond):</b></li>
-                                <i>./vol.py --profile-[ProfileOSName] netscan-f [/path/to/memory/dump]</i>
-                            <li><b>View Active and terminated connections:</b></li>
-                                <i>./vol.py --profile-[ProfileOSName] connscan -f [/path/to/memory/dump]</i>
+                        <li><b>View network connections (Win & & beyond):</b></li>
+                            <i>./vol.py --profile-[ProfileOSName] netscan-f [/path/to/memory/dump]</i>
+                        <li><b>View Active and terminated connections:</b></li>
+                            <i>./vol.py --profile-[ProfileOSName] connscan -f [/path/to/memory/dump]</i>
 
-                            <li><b>View listening sockets (TCP & UDP):</b></li>
-                                <i>./vol.py --profile-[ProfileOSName] sockets -f [/path/to/memory/dump]</i>
-                            <li><b>View lists of running services:</b></li>
-                                <i>./vol.py --profile-[ProfileOSName] svcscan -f [/path/to/memory/dump]</i>
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
+                        <li><b>View listening sockets (TCP & UDP):</b></li>
+                            <i>./vol.py --profile-[ProfileOSName] sockets -f [/path/to/memory/dump]</i>
+                        <li><b>View lists of running services:</b></li>
+                            <i>./vol.py --profile-[ProfileOSName] svcscan -f [/path/to/memory/dump]</i>
+          </p>
+        </div> 
 
         </section>
         <!Notes End>
