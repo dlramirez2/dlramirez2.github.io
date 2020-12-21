@@ -209,7 +209,7 @@
                              <h5>Notes <i class="fas fa-folder-open"></i>
                             </h5>
                          </span>
-                         <p align="center">This is my own notes page. Here I have gathered notes about software I have experience with.</p>
+                         <p align="center">This is my own notes page. Here I have gathered notes about software I have experience with or just information I would like to have easy access to.</p>
 
                     </div>
                 </div>
@@ -286,7 +286,51 @@
                             <i>./vol.py --profile-[ProfileOSName] svcscan -f [/path/to/memory/dump]</i>
           </p>
         </div> 
+        <button type="button" class="collapsible">SQL Queries</button>
+        <div class="content">
+          <p>
+            <li><b>Get DBs Names</b></li>
+            <i>show databases;</i>
+            
+            <li><b>Select Specific DB:</b></li>
+            <i>use [db_name];</i>
 
+            <li><b>Select Table Content:</b></li>
+            <i>SELECT * FROM [table_name];</i>
+            
+            <li><b>Create Table:</b></li>
+            <i>CREATE TABLE [table_name] (Column_Name type(x),....);</i>
+
+            <li><b>Insert into Table:</b></li>
+            <i>INSERT INTO [table_name] VALUES ('X','Y',10...); (must match all columns in table) <br></i>
+            <i>INSERT INTO [table_name] (column1,column2,column3) VALUES ('X','Y',10); (if only inserting in specific columns) </i>
+
+            <li><b>Delete Table:</b></li>
+            <i>DROP TABLE [table_name];</i>
+
+            <li><b>Delete Table:</b></li>
+            <i>DROP TABLE [table_name];</i>
+
+            <li><b>Create Table w/ Primary & Foreign Key:</b></li>
+            <i>CREATE TABLE [table_name] (Column_Name type(x),...., PRIMARY KEY (X), FOREIGN KEY (Y) REFERENCES table2(Y));</i>
+
+            <li><b>Column Properties:</b></li>
+            <i>[Column_Name] type(x) NOT NULL;  (Primary Key)<br></i>
+            <i>[Column_Name] type(x) DEFAULT 'XYZ'/#;<br></i>
+            <i>[Column_Name] type(x) UNSIGNED; (NonNegative #s Only)<br></i>
+            <i>[Column_Name] type(x) UNIQUE;<br></i>
+
+            <li><b>Procedures:</b></li>
+            <i><b>Call Procedure<br></b></i>
+            <i>CALL simpleProc(@a); (@a is a variable)<br></i>
+            <i><b>Procedure Example: count all from table<br></b></i>
+            <i>CREATE PROCEDURE sumpleProc(IN param1 TYPE)<br></i>
+            <i>BEGIN<br></i>
+            <i>SELECT COUNT(*) INTO param1 FROM table_name;<br></i>
+            <i>END //<br></i>
+            
+          </p>
+        </div>
         </section>
         <!Notes End>
         <!Interesting Links Tab>
