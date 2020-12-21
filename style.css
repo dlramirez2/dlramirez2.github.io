@@ -106,8 +106,8 @@ blockquote{
     border-left: 5px solid #00909e; /* Just change the color value and that's it*/
 }
 .collapsible {
-  background-color: #777;
-  color: white;
+  background-color: #78909c;
+  color: black;
   cursor: pointer;
   padding: 18px;
   width: 100%;
@@ -119,7 +119,7 @@ blockquote{
 
 .active,
 .collapsible:hover {
-  background-color: #555;
+  background-color: #78909c;
 }
 
 .content {
@@ -128,3 +128,4 @@ blockquote{
   overflow: hidden;
   background-color: #f1f1f1;
 }
+
